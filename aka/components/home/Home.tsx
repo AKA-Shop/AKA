@@ -1,6 +1,8 @@
 import React from 'react'
-
-import Image from 'next/image'
+// import Carousel from 'react-bootstrap/Carousel';
+// import Image from 'next/image'
+import Car from '../carousel/Carousel';
+import NavBar from '../navbar/NavBar';
 const Home = () => {
   return (
       <>
@@ -16,232 +18,25 @@ const Home = () => {
     rel="stylesheet"
   />
   {/* Css Styles */}
-  {/* <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
   <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
   <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/style.css" type="text/css" /> */}
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
   {/* Page Preloder */}
   <div id="preloder">
     <div className="loader" />
   </div>
-  {/* Offcanvas Menu Begin */}
-  <div className="offcanvas-menu-overlay" />
-  <div className="offcanvas-menu-wrapper">
-    <div className="offcanvas__option">
-      <div className="offcanvas__links">
-        <a href="#">Sign in</a>
-        <a href="#">FAQs</a>
-      </div>
-      <div className="offcanvas__top__hover">
-        <span>
-          Usd <i className="arrow_carrot-down" />
-        </span>
-        <ul>
-          <li>USD</li>
-          <li>EUR</li>
-          <li>USD</li>
-        </ul>
-      </div>
-    </div>
-    <div className="offcanvas__nav__option">
-      <a href="#" className="search-switch">
-        <Image width={500}
-      height={500} src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670922313/AKA/search_kbkgaw.png" alt="" />
-      </a>
-      <a href="#">
-        <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
-      </a>
-      <a href="#">
-        <Image width={500}
-      height={500} src="/aka/img/icon/cart.png" alt="" /> <span>0</span>
-      </a>
-      <div className="price">$0.00</div>
-    </div>
-    <div id="mobile-menu-wrap" />
-    <div className="offcanvas__text">
-      <p>Free shipping, 30-day return or refund guarantee.</p>
-    </div>
-  </div>
-  {/* Offcanvas Menu End */}
-  {/* Header Section Begin */}
-  <header className="header">
-    <div className="header__top">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6 col-md-7">
-            <div className="header__top__left">
-              <p>Free shipping, 30-day return or refund guarantee.</p>
-            </div>
-          </div>
-          <div className="col-lg-6 col-md-5">
-            <div className="header__top__right">
-              <div className="header__top__links">
-                <a href="#">Sign in</a>
-                <a href="#">FAQs</a>
-              </div>
-              <div className="header__top__hover">
-                <span>
-                  Usd <i className="arrow_carrot-down" />
-                </span>
-                <ul>
-                  <li>USD</li>
-                  <li>EUR</li>
-                  <li>USD</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-3 col-md-3">
-          <div className="header__logo">
-            <a href="./index.html">
-              <Image width={500}
-      height={500} src="/aka/img/logo.png" alt="" />
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-6">
-          <nav className="header__menu mobile-menu">
-            <ul>
-              <li className="active">
-                <a href="./index.html">Home</a>
-              </li>
-              <li>
-                <a href="./shop.html">Shop</a>
-              </li>
-              <li>
-                <a href="#">Pages</a>
-                <ul className="dropdown">
-                  <li>
-                    <a href="./about.html">About Us</a>
-                  </li>
-                  <li>
-                    <a href="./shop-details.html">Shop Details</a>
-                  </li>
-                  <li>
-                    <a href="./shopping-cart.html">Shopping Cart</a>
-                  </li>
-                  <li>
-                    <a href="./checkout.html">Check Out</a>
-                  </li>
-                  <li>
-                    <a href="./blog-details.html">Blog Details</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="./blog.html">Blog</a>
-              </li>
-              <li>
-                <a href="./contact.html">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div className="col-lg-3 col-md-3">
-          <div className="header__nav__option">
-            <a href="#" className="search-switch">
-              <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
-            </a>
-            <a href="#">
-              <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
-            </a>
-            <a href="#">
-              <Image width={500}
-      height={500} src="/aka/img/icon/cart.png" alt="" /> <span>0</span>
-            </a>
-            <div className="price">$0.00</div>
-          </div>
-        </div>
-      </div>
-      <div className="canvas__open">
-        <i className="fa fa-bars" />
-      </div>
-    </div>
-  </header>
+ <NavBar></NavBar>
   {/* Header Section End */}
   {/* Hero Section Begin */}
-  <section className="hero">
-    <div className="hero__slider owl-carousel">
-      <div className="hero__items set-bg" data-setbg="/aka/img/hero/hero-1.jpg">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-5 col-lg-7 col-md-8">
-              <div className="hero__text">
-                <h6>Summer Collection</h6>
-                <h2>Fall - Winter Collections 2030</h2>
-                <p>
-                  A specialist label creating luxury essentials. Ethically
-                  crafted with an unwavering commitment to exceptional quality.
-                </p>
-                <a href="#" className="primary-btn">
-                  Shop now <span className="arrow_right" />
-                </a>
-                <div className="hero__social">
-                  <a href="#">
-                    <i className="fa fa-facebook" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-twitter" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-pinterest" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-instagram" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="hero__items set-bg" data-setbg="/aka/img/hero/hero-2.jpg">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-5 col-lg-7 col-md-8">
-              <div className="hero__text">
-                <h6>Summer Collection</h6>
-                <h2>Fall - Winter Collections 2030</h2>
-                <p>
-                  A specialist label creating luxury essentials. Ethically
-                  crafted with an unwavering commitment to exceptional quality.
-                </p>
-                <a href="#" className="primary-btn">
-                  Shop now <span className="arrow_right" />
-                </a>
-                <div className="hero__social">
-                  <a href="#">
-                    <i className="fa fa-facebook" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-twitter" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-pinterest" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-instagram" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ <section className="hero">
+    <Car></Car>
+</section>
+
   {/* Hero Section End */}
   {/* Banner Section Begin */}
   <section className="banner spad">
@@ -250,8 +45,7 @@ const Home = () => {
         <div className="col-lg-7 offset-lg-4">
           <div className="banner__item">
             <div className="banner__item__pic">
-              <Image width={500}
-      height={500} src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670922840/AKA/banner-1_yyzepz.jpg" alt="" />
+              <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670924731/aka/banner/banner-1_zjlwum.jpg" alt="" />
             </div>
             <div className="banner__item__text">
               <h2>Clothing Collections 2030</h2>
@@ -262,8 +56,7 @@ const Home = () => {
         <div className="col-lg-5">
           <div className="banner__item banner__item--middle">
             <div className="banner__item__pic">
-              <Image width={500}
-      height={500} src="/aka/img/banner/banner-2.jpg" alt="" />
+              <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670924731/aka/banner/banner-2_cthfg4.jpg" alt="" />
             </div>
             <div className="banner__item__text">
               <h2>Accessories</h2>
@@ -274,8 +67,7 @@ const Home = () => {
         <div className="col-lg-7">
           <div className="banner__item banner__item--last">
             <div className="banner__item__pic">
-              <Image width={500}
-      height={500} src="/aka/img/banner/banner-3.jpg" alt="" />
+              <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670924731/aka/banner/banner-3_xvgsjp.jpg" alt="" />
             </div>
             <div className="banner__item__text">
               <h2>Shoes Spring 2030</h2>
@@ -312,21 +104,18 @@ const Home = () => {
               <ul className="product__hover">
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
+                    <img src="/aka/img/icon/heart.png" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
                     <span>Compare</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
+                    <img src="/aka/img/icon/search.png" alt="" />
                   </a>
                 </li>
               </ul>
@@ -367,21 +156,18 @@ const Home = () => {
               <ul className="product__hover">
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
+                    <img src="/aka/img/icon/heart.png" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
                     <span>Compare</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
+                    <img src="/aka/img/icon/search.png" alt="" />
                   </a>
                 </li>
               </ul>
@@ -423,21 +209,18 @@ const Home = () => {
               <ul className="product__hover">
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
+                    <img src="/aka/img/icon/heart.png" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
                     <span>Compare</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
+                    <img src="/aka/img/icon/search.png" alt="" />
                   </a>
                 </li>
               </ul>
@@ -478,21 +261,18 @@ const Home = () => {
               <ul className="product__hover">
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
+                    <img src="/aka/img/icon/heart.png" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
                     <span>Compare</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
+                    <img src="/aka/img/icon/search.png" alt="" />
                   </a>
                 </li>
               </ul>
@@ -533,21 +313,18 @@ const Home = () => {
               <ul className="product__hover">
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
+                    <img src="/aka/img/icon/heart.png" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
                     <span>Compare</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
+                    <img src="/aka/img/icon/search.png" alt="" />
                   </a>
                 </li>
               </ul>
@@ -589,21 +366,18 @@ const Home = () => {
               <ul className="product__hover">
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
+                    <img src="/aka/img/icon/heart.png" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
                     <span>Compare</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
+                    <img src="/aka/img/icon/search.png" alt="" />
                   </a>
                 </li>
               </ul>
@@ -644,21 +418,18 @@ const Home = () => {
               <ul className="product__hover">
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
+                    <img src="/aka/img/icon/heart.png" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
                     <span>Compare</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
+                    <img src="/aka/img/icon/search.png" alt="" />
                   </a>
                 </li>
               </ul>
@@ -699,21 +470,18 @@ const Home = () => {
               <ul className="product__hover">
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
+                    <img src="/aka/img/icon/heart.png" alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
                     <span>Compare</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
+                    <img src="/aka/img/icon/search.png" alt="" />
                   </a>
                 </li>
               </ul>
@@ -763,8 +531,7 @@ const Home = () => {
         </div>
         <div className="col-lg-4">
           <div className="categories__hot__deal">
-            <Image width={500}
-      height={500} src="/aka/img/product-sale.png" alt="" />
+            <img src="/aka/img/product-sale.png" alt="" />
             <div className="hot__deal__sticker">
               <span>Sale Of</span>
               <h5>$29.99</h5>
@@ -810,11 +577,16 @@ const Home = () => {
           <div className="instagram__pic">
             <div
               className="instagram__pic__item set-bg"
-              data-setbg="/aka/img/instagram/instagram-1.jpg"
+              style={{  
+  backgroundImage: "url(" + "https://res.cloudinary.com/dugewmeeh/image/upload/v1670925680/aka/hero/hero-1_olnrha.jpg" +  ")",
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
+}} 
             />
             <div
               className="instagram__pic__item set-bg"
-              data-setbg="/aka/img/instagram/instagram-2.jpg"
+              data-setbg=""
             />
             <div
               className="instagram__pic__item set-bg"
@@ -868,8 +640,7 @@ const Home = () => {
             />
             <div className="blog__item__text">
               <span>
-                <Image width={500}
-      height={500} src="/aka/img/icon/calendar.png" alt="" /> 16 February 2020
+                <img src="/aka/img/icon/calendar.png" alt="" /> 16 February 2020
               </span>
               <h5>What Curling Irons Are The Best Ones</h5>
               <a href="#">Read More</a>
@@ -884,8 +655,7 @@ const Home = () => {
             />
             <div className="blog__item__text">
               <span>
-                <Image width={500}
-      height={500} src="/aka/img/icon/calendar.png" alt="" /> 21 February 2020
+                <img src="/aka/img/icon/calendar.png" alt="" /> 21 February 2020
               </span>
               <h5>Eternity Bands Do Last Forever</h5>
               <a href="#">Read More</a>
@@ -900,8 +670,7 @@ const Home = () => {
             />
             <div className="blog__item__text">
               <span>
-                <Image width={500}
-      height={500} src="/aka/img/icon/calendar.png" alt="" /> 28 February 2020
+                <img src="/aka/img/icon/calendar.png" alt="" /> 28 February 2020
               </span>
               <h5>The Health Benefits Of Sunglasses</h5>
               <a href="#">Read More</a>
@@ -920,8 +689,7 @@ const Home = () => {
           <div className="footer__about">
             <div className="footer__logo">
               <a href="#">
-                <Image width={500}
-      height={500} src="/aka/img/footer-logo.png" alt="" />
+                <img src="/aka/img/footer-logo.png" alt="" />
               </a>
             </div>
             <p>
@@ -929,8 +697,7 @@ const Home = () => {
               includes design.
             </p>
             <a href="#">
-              <Image width={500}
-      height={500} src="/aka/img/payment.png" alt="" />
+              <img src="/aka/img/payment.png" alt="" />
             </a>
           </div>
         </div>
