@@ -1,6 +1,8 @@
 import React from 'react'
-
-import Image from 'next/image'
+// import Carousel from 'react-bootstrap/Carousel';
+// import Image from 'next/image'
+import Car from '../carousel/Carousel';
+import NavBar from '../navbar/NavBar';
 const Home = () => {
   return (
       <>
@@ -16,232 +18,25 @@ const Home = () => {
     rel="stylesheet"
   />
   {/* Css Styles */}
-  {/* <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="css/elegant-icons.css" type="text/css" />
   <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
   <link rel="stylesheet" href="css/nice-select.css" type="text/css" />
   <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css" />
   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/style.css" type="text/css" /> */}
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
   {/* Page Preloder */}
   <div id="preloder">
     <div className="loader" />
   </div>
-  {/* Offcanvas Menu Begin */}
-  <div className="offcanvas-menu-overlay" />
-  <div className="offcanvas-menu-wrapper">
-    <div className="offcanvas__option">
-      <div className="offcanvas__links">
-        <a href="#">Sign in</a>
-        <a href="#">FAQs</a>
-      </div>
-      <div className="offcanvas__top__hover">
-        <span>
-          Usd <i className="arrow_carrot-down" />
-        </span>
-        <ul>
-          <li>USD</li>
-          <li>EUR</li>
-          <li>USD</li>
-        </ul>
-      </div>
-    </div>
-    <div className="offcanvas__nav__option">
-      <a href="#" className="search-switch">
-        <Image width={500}
-      height={500} src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670922313/AKA/search_kbkgaw.png" alt="" />
-      </a>
-      <a href="#">
-        <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
-      </a>
-      <a href="#">
-        <Image width={500}
-      height={500} src="/aka/img/icon/cart.png" alt="" /> <span>0</span>
-      </a>
-      <div className="price">$0.00</div>
-    </div>
-    <div id="mobile-menu-wrap" />
-    <div className="offcanvas__text">
-      <p>Free shipping, 30-day return or refund guarantee.</p>
-    </div>
-  </div>
-  {/* Offcanvas Menu End */}
-  {/* Header Section Begin */}
-  <header className="header">
-    <div className="header__top">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6 col-md-7">
-            <div className="header__top__left">
-              <p>Free shipping, 30-day return or refund guarantee.</p>
-            </div>
-          </div>
-          <div className="col-lg-6 col-md-5">
-            <div className="header__top__right">
-              <div className="header__top__links">
-                <a href="#">Sign in</a>
-                <a href="#">FAQs</a>
-              </div>
-              <div className="header__top__hover">
-                <span>
-                  Usd <i className="arrow_carrot-down" />
-                </span>
-                <ul>
-                  <li>USD</li>
-                  <li>EUR</li>
-                  <li>USD</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-3 col-md-3">
-          <div className="header__logo">
-            <a href="./index.html">
-              <Image width={500}
-      height={500} src="/aka/img/logo.png" alt="" />
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-6">
-          <nav className="header__menu mobile-menu">
-            <ul>
-              <li className="active">
-                <a href="./index.html">Home</a>
-              </li>
-              <li>
-                <a href="./shop.html">Shop</a>
-              </li>
-              <li>
-                <a href="#">Pages</a>
-                <ul className="dropdown">
-                  <li>
-                    <a href="./about.html">About Us</a>
-                  </li>
-                  <li>
-                    <a href="./shop-details.html">Shop Details</a>
-                  </li>
-                  <li>
-                    <a href="./shopping-cart.html">Shopping Cart</a>
-                  </li>
-                  <li>
-                    <a href="./checkout.html">Check Out</a>
-                  </li>
-                  <li>
-                    <a href="./blog-details.html">Blog Details</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="./blog.html">Blog</a>
-              </li>
-              <li>
-                <a href="./contact.html">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div className="col-lg-3 col-md-3">
-          <div className="header__nav__option">
-            <a href="#" className="search-switch">
-              <Image width={500}
-      height={500} src="/aka/img/icon/search.png" alt="" />
-            </a>
-            <a href="#">
-              <Image width={500}
-      height={500} src="/aka/img/icon/heart.png" alt="" />
-            </a>
-            <a href="#">
-              <Image width={500}
-      height={500} src="/aka/img/icon/cart.png" alt="" /> <span>0</span>
-            </a>
-            <div className="price">$0.00</div>
-          </div>
-        </div>
-      </div>
-      <div className="canvas__open">
-        <i className="fa fa-bars" />
-      </div>
-    </div>
-  </header>
+ <NavBar></NavBar>
   {/* Header Section End */}
   {/* Hero Section Begin */}
-  <section className="hero">
-    <div className="hero__slider owl-carousel">
-      <div className="hero__items set-bg" data-setbg="/aka/img/hero/hero-1.jpg">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-5 col-lg-7 col-md-8">
-              <div className="hero__text">
-                <h6>Summer Collection</h6>
-                <h2>Fall - Winter Collections 2030</h2>
-                <p>
-                  A specialist label creating luxury essentials. Ethically
-                  crafted with an unwavering commitment to exceptional quality.
-                </p>
-                <a href="#" className="primary-btn">
-                  Shop now <span className="arrow_right" />
-                </a>
-                <div className="hero__social">
-                  <a href="#">
-                    <i className="fa fa-facebook" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-twitter" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-pinterest" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-instagram" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="hero__items set-bg" data-setbg="/aka/img/hero/hero-2.jpg">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-5 col-lg-7 col-md-8">
-              <div className="hero__text">
-                <h6>Summer Collection</h6>
-                <h2>Fall - Winter Collections 2030</h2>
-                <p>
-                  A specialist label creating luxury essentials. Ethically
-                  crafted with an unwavering commitment to exceptional quality.
-                </p>
-                <a href="#" className="primary-btn">
-                  Shop now <span className="arrow_right" />
-                </a>
-                <div className="hero__social">
-                  <a href="#">
-                    <i className="fa fa-facebook" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-twitter" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-pinterest" />
-                  </a>
-                  <a href="#">
-                    <i className="fa fa-instagram" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ <section className="hero">
+    <Car></Car>
+</section>
+
   {/* Hero Section End */}
   {/* Banner Section Begin */}
   <section className="banner spad">
@@ -250,8 +45,7 @@ const Home = () => {
         <div className="col-lg-7 offset-lg-4">
           <div className="banner__item">
             <div className="banner__item__pic">
-              <Image width={500}
-      height={500} src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670922840/AKA/banner-1_yyzepz.jpg" alt="" />
+              <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670924731/aka/banner/banner-1_zjlwum.jpg" alt="" />
             </div>
             <div className="banner__item__text">
               <h2>Clothing Collections 2030</h2>
@@ -262,8 +56,7 @@ const Home = () => {
         <div className="col-lg-5">
           <div className="banner__item banner__item--middle">
             <div className="banner__item__pic">
-              <Image width={500}
-      height={500} src="/aka/img/banner/banner-2.jpg" alt="" />
+              <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670924731/aka/banner/banner-2_cthfg4.jpg" alt="" />
             </div>
             <div className="banner__item__text">
               <h2>Accessories</h2>
@@ -274,8 +67,7 @@ const Home = () => {
         <div className="col-lg-7">
           <div className="banner__item banner__item--last">
             <div className="banner__item__pic">
-              <Image width={500}
-      height={500} src="/aka/img/banner/banner-3.jpg" alt="" />
+              <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670924731/aka/banner/banner-3_xvgsjp.jpg" alt="" />
             </div>
             <div className="banner__item__text">
               <h2>Shoes Spring 2030</h2>
@@ -288,6 +80,494 @@ const Home = () => {
   </section>
   {/* Banner Section End */}
   {/* Product Section Begin */}
+  <section className="product spad">
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-12">
+          <ul className="filter__controls">
+            <li className="active" data-filter="*">
+              Best Sellers
+            </li>
+            <li data-filter=".new-arrivals">New Arrivals</li>
+            <li data-filter=".hot-sales">Hot Sales</li>
+          </ul>
+        </div>
+      </div>
+      <div className="row product__filter">
+        <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+          <div className="product__item">
+            <div
+              className="product__item__pic set-bg"
+              data-setbg="/aka/img/product/product-1.jpg"
+            >
+              <span className="label">New</span>
+              <ul className="product__hover">
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/heart.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <span>Compare</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/search.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product__item__text">
+              <h6>Piqué Biker Jacket</h6>
+              <a href="#" className="add-cart">
+                + Add To Cart
+              </a>
+              <div className="rating">
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+              </div>
+              <h5>$67.24</h5>
+              <div className="product__color__select">
+                <label htmlFor="pc-1">
+                  <input type="radio" id="pc-1" />
+                </label>
+                <label className="active black" htmlFor="pc-2">
+                  <input type="radio" id="pc-2" />
+                </label>
+                <label className="grey" htmlFor="pc-3">
+                  <input type="radio" id="pc-3" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
+          <div className="product__item">
+            <div
+              className="product__item__pic set-bg"
+              data-setbg="/aka/img/product/product-2.jpg"
+            >
+              <ul className="product__hover">
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/heart.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <span>Compare</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/search.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product__item__text">
+              <h6>Piqué Biker Jacket</h6>
+              <a href="#" className="add-cart">
+                + Add To Cart
+              </a>
+              <div className="rating">
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+              </div>
+              <h5>$67.24</h5>
+              <div className="product__color__select">
+                <label htmlFor="pc-4">
+                  <input type="radio" id="pc-4" />
+                </label>
+                <label className="active black" htmlFor="pc-5">
+                  <input type="radio" id="pc-5" />
+                </label>
+                <label className="grey" htmlFor="pc-6">
+                  <input type="radio" id="pc-6" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+          <div className="product__item sale">
+            <div
+              className="product__item__pic set-bg"
+              data-setbg="/aka/img/product/product-3.jpg"
+            >
+              <span className="label">Sale</span>
+              <ul className="product__hover">
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/heart.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <span>Compare</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/search.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product__item__text">
+              <h6>Multi-pocket Chest Bag</h6>
+              <a href="#" className="add-cart">
+                + Add To Cart
+              </a>
+              <div className="rating">
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+                <i className="fa fa-star-o" />
+              </div>
+              <h5>$43.48</h5>
+              <div className="product__color__select">
+                <label htmlFor="pc-7">
+                  <input type="radio" id="pc-7" />
+                </label>
+                <label className="active black" htmlFor="pc-8">
+                  <input type="radio" id="pc-8" />
+                </label>
+                <label className="grey" htmlFor="pc-9">
+                  <input type="radio" id="pc-9" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
+          <div className="product__item">
+            <div
+              className="product__item__pic set-bg"
+              data-setbg="/aka/img/product/product-4.jpg"
+            >
+              <ul className="product__hover">
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/heart.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <span>Compare</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/search.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product__item__text">
+              <h6>Diagonal Textured Cap</h6>
+              <a href="#" className="add-cart">
+                + Add To Cart
+              </a>
+              <div className="rating">
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+              </div>
+              <h5>$60.9</h5>
+              <div className="product__color__select">
+                <label htmlFor="pc-10">
+                  <input type="radio" id="pc-10" />
+                </label>
+                <label className="active black" htmlFor="pc-11">
+                  <input type="radio" id="pc-11" />
+                </label>
+                <label className="grey" htmlFor="pc-12">
+                  <input type="radio" id="pc-12" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+          <div className="product__item">
+            <div
+              className="product__item__pic set-bg"
+              data-setbg="/aka/img/product/product-5.jpg"
+            >
+              <ul className="product__hover">
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/heart.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <span>Compare</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/search.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product__item__text">
+              <h6>Lether Backpack</h6>
+              <a href="#" className="add-cart">
+                + Add To Cart
+              </a>
+              <div className="rating">
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+              </div>
+              <h5>$31.37</h5>
+              <div className="product__color__select">
+                <label htmlFor="pc-13">
+                  <input type="radio" id="pc-13" />
+                </label>
+                <label className="active black" htmlFor="pc-14">
+                  <input type="radio" id="pc-14" />
+                </label>
+                <label className="grey" htmlFor="pc-15">
+                  <input type="radio" id="pc-15" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
+          <div className="product__item sale">
+            <div
+              className="product__item__pic set-bg"
+              data-setbg="/aka/img/product/product-6.jpg"
+            >
+              <span className="label">Sale</span>
+              <ul className="product__hover">
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/heart.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <span>Compare</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/search.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product__item__text">
+              <h6>Ankle Boots</h6>
+              <a href="#" className="add-cart">
+                + Add To Cart
+              </a>
+              <div className="rating">
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+                <i className="fa fa-star" />
+                <i className="fa fa-star-o" />
+              </div>
+              <h5>$98.49</h5>
+              <div className="product__color__select">
+                <label htmlFor="pc-16">
+                  <input type="radio" id="pc-16" />
+                </label>
+                <label className="active black" htmlFor="pc-17">
+                  <input type="radio" id="pc-17" />
+                </label>
+                <label className="grey" htmlFor="pc-18">
+                  <input type="radio" id="pc-18" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+          <div className="product__item">
+            <div
+              className="product__item__pic set-bg"
+              data-setbg="/aka/img/product/product-7.jpg"
+            >
+              <ul className="product__hover">
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/heart.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <span>Compare</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/search.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product__item__text">
+              <h6>T-shirt Contrast Pocket</h6>
+              <a href="#" className="add-cart">
+                + Add To Cart
+              </a>
+              <div className="rating">
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+              </div>
+              <h5>$49.66</h5>
+              <div className="product__color__select">
+                <label htmlFor="pc-19">
+                  <input type="radio" id="pc-19" />
+                </label>
+                <label className="active black" htmlFor="pc-20">
+                  <input type="radio" id="pc-20" />
+                </label>
+                <label className="grey" htmlFor="pc-21">
+                  <input type="radio" id="pc-21" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
+          <div className="product__item">
+            <div
+              className="product__item__pic set-bg"
+              data-setbg="/aka/img/product/product-8.jpg"
+            >
+              <ul className="product__hover">
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/heart.png" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/compare.png" alt="" />{" "}
+                    <span>Compare</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/aka/img/icon/search.png" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product__item__text">
+              <h6>Basic Flowing Scarf</h6>
+              <a href="#" className="add-cart">
+                + Add To Cart
+              </a>
+              <div className="rating">
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+                <i className="fa fa-star-o" />
+              </div>
+              <h5>$26.28</h5>
+              <div className="product__color__select">
+                <label htmlFor="pc-22">
+                  <input type="radio" id="pc-22" />
+                </label>
+                <label className="active black" htmlFor="pc-23">
+                  <input type="radio" id="pc-23" />
+                </label>
+                <label className="grey" htmlFor="pc-24">
+                  <input type="radio" id="pc-24" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {/* Product Section End */}
+  {/* Categories Section Begin */}
+  <section className="categories spad">
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-3">
+          <div className="categories__text">
+            <h2>
+              Clothings Hot <br /> <span>Shoe Collection</span> <br />{" "}
+              Accessories
+            </h2>
+          </div>
+        </div>
+        <div className="col-lg-4">
+          <div className="categories__hot__deal">
+            <img src="/aka/img/product-sale.png" alt="" />
+            <div className="hot__deal__sticker">
+              <span>Sale Of</span>
+              <h5>$29.99</h5>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 offset-lg-1">
+          <div className="categories__deal__countdown">
+            <span>Deal Of The Week</span>
+            <h2>Multi-pocket Chest Bag Black</h2>
+            <div className="categories__deal__countdown__timer" id="countdown">
+              <div className="cd-item">
+                <span>3</span>
+                <p>Days</p>
+              </div>
+              <div className="cd-item">
+                <span>1</span>
+                <p>Hours</p>
+              </div>
+              <div className="cd-item">
+                <span>50</span>
+                <p>Minutes</p>
+              </div>
+              <div className="cd-item">
+                <span>18</span>
+                <p>Seconds</p>
+              </div>
+            </div>
+            <a href="#" className="primary-btn">
+              Shop now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   {/* Categories Section End */}
   {/* Instagram Section Begin */}
   <section className="instagram spad">
@@ -297,16 +577,16 @@ const Home = () => {
           <div className="instagram__pic">
             <div
               className="instagram__pic__item set-bg"
-              style={{
-                backgroundImage: "url(" + "https://res.cloudinary.com/dugewmeeh/image/upload/v1670925680/aka/hero/hero-1_olnrha.jpg" +  ")",
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat'
-              }}
+              style={{  
+  backgroundImage: "url(" + "https://res.cloudinary.com/dugewmeeh/image/upload/v1670925680/aka/hero/hero-1_olnrha.jpg" +  ")",
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
+}} 
             />
             <div
               className="instagram__pic__item set-bg"
-              data-setbg="https://res.cloudinary.com/dqmhtibfm/image/upload/v1670924554/aka/insta/instagram-2_mtaex4.jpg"
+              data-setbg=""
             />
             <div
               className="instagram__pic__item set-bg"
@@ -360,8 +640,7 @@ const Home = () => {
             />
             <div className="blog__item__text">
               <span>
-                <Image width={500}
-      height={500} src="/aka/img/icon/calendar.png" alt="" /> 16 February 2020
+                <img src="/aka/img/icon/calendar.png" alt="" /> 16 February 2020
               </span>
               <h5>What Curling Irons Are The Best Ones</h5>
               <a href="#">Read More</a>
@@ -376,8 +655,7 @@ const Home = () => {
             />
             <div className="blog__item__text">
               <span>
-                <Image width={500}
-      height={500} src="/aka/img/icon/calendar.png" alt="" /> 21 February 2020
+                <img src="/aka/img/icon/calendar.png" alt="" /> 21 February 2020
               </span>
               <h5>Eternity Bands Do Last Forever</h5>
               <a href="#">Read More</a>
@@ -392,8 +670,7 @@ const Home = () => {
             />
             <div className="blog__item__text">
               <span>
-                <Image width={500}
-      height={500} src="/aka/img/icon/calendar.png" alt="" /> 28 February 2020
+                <img src="/aka/img/icon/calendar.png" alt="" /> 28 February 2020
               </span>
               <h5>The Health Benefits Of Sunglasses</h5>
               <a href="#">Read More</a>
@@ -412,8 +689,7 @@ const Home = () => {
           <div className="footer__about">
             <div className="footer__logo">
               <a href="#">
-                <Image width={500}
-      height={500} src="/aka/img/footer-logo.png" alt="" />
+                <img src="/aka/img/footer-logo.png" alt="" />
               </a>
             </div>
             <p>
@@ -421,8 +697,7 @@ const Home = () => {
               includes design.
             </p>
             <a href="#">
-              <Image width={500}
-      height={500} src="/aka/img/payment.png" alt="" />
+              <img src="/aka/img/payment.png" alt="" />
             </a>
           </div>
         </div>
