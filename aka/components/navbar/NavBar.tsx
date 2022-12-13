@@ -1,5 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from 'next/link'
 const NavBar = () => {
   return (
     <> {/* Offcanvas Menu Begin */}
@@ -83,7 +84,7 @@ const NavBar = () => {
           <nav className="header__menu mobile-menu">
             <ul>
               <li className="active">
-                <a href="./index.html">Home</a>
+                <Link href='/'>Home</Link>
               </li>
               <li>
                 <a href="./shop.html">Shop</a>
@@ -92,13 +93,13 @@ const NavBar = () => {
               <li>
                 <a href="./blog.html">About Us</a>
               </li>
-              <li><div className="input-group rounded">
-  <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-  <div className="input-group-text border-0" id="search-addon" style={{backgroundImage:'url(https://res.cloudinary.com/dugewmeeh/image/upload/v1670942416/aka/hero/google-web-search-icon-16-256_tkobnc.png)', backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat'}}>
-
-  </div>
+              <li><div className="input-group rounded row">
+                <div className='col'><input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" /></div>
+  <div className='col-3'> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+  <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
+</svg>
+</div>
+ 
 </div></li>
             </ul>
           </nav>
