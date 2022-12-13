@@ -9,7 +9,7 @@ app.use (cors())
 
 app.use ('/product',productRoute)
 
-const db="mongodb+srv://root:root@cluster0.pwlxki1.mongodb.net/AKA"; 
+const db= "mongodb+srv://root:root@cluster0.pwlxki1.mongodb.net/AKA"; 
 mongoose.set('strictQuery',true) 
 mongoose .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
 .then((res) => {
