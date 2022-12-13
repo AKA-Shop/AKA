@@ -9,9 +9,9 @@ const Product = mongoose.model(
     color: {type:Array},
     size: {type:Array},
     gender: {type:String},
-    categorie: {type:String,enum:['','']},
+    categorie: {type:String,enum:['Men','Women','kids','Premature Baby','Shoes','Accessories']},
    
-    brande: {type:String},
+    brand: {type:String,enum:['Louis Vuitton','Chanel','Hermes','Gucci']},
     closeView: {type:String},
     fullView: {type:String},
     withoutModel: {type:String},
