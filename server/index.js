@@ -3,11 +3,13 @@ const cors = require ('cors')
 const mongoose = require ('mongoose')
 const app = express()
 const productRoute= require ('./routes/product.routes')
+const CartRoute = require ('./routes/Cart.routes')
 app.use(express.json())
 app.use (cors())
 
 
 app.use ('/product',productRoute)
+app.use('/Cart',CartRoute)
 
 const db= "mongodb+srv://root:root@cluster0.pwlxki1.mongodb.net/AKA"; 
 mongoose.set('strictQuery',true) 

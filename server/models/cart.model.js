@@ -6,7 +6,7 @@ const Cart = mongoose.model(
     nameArticle:  {type:String},
     price: {type:Number},
     quantity:{type:Number},
-    image:{type:Number},
+    image:{type:String}
   })
 );
 

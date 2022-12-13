@@ -157,7 +157,7 @@ const Home = () => {
             />
             <div
               className="instagram__pic__item set-bg"
-              data-setbg="/aka/img/instagram/instagram-3.jpg"
+              data-setbg="https://res.cloudinary.com/dqmhtibfm/image/upload/v1670924554/aka/insta/instagram-3_boktz7.jpg"
             />
             <div
               className="instagram__pic__item set-bg"
