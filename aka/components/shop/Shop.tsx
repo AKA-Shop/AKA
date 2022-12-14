@@ -1,6 +1,21 @@
 import React from 'react'
-import NavBar from '../navbar/NavBar'
+import NavBar from '../navbar/NavBar' 
+
+
+export const getStaticProps = async () => { 
+  const res = await fetch('http://localhost:8080/product/getall'); 
+  const data = await res.json; 
+
+console.log(data)
+  return { 
+    props: {products : data}
+   
+  }
+    
+} 
+
 const shop = () => {
+  
   return (
     <>
     <meta charSet="UTF-8" />
@@ -461,6 +476,7 @@ const shop = () => {
               <p>
                 Copyright © 2020 All rights reserved | This template is made with{" "}
                 <i className="fa fa-heart-o" aria-hidden="true" /> by{" "}
+                <a href="https://colorlib.com" target="_blank" rel="noreferrer">
                 <a href="https://colorlib.com" target="_blank"  rel="noreferrer">
                   Colorlib
                 </a>
