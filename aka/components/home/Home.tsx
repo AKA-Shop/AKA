@@ -339,7 +339,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div>  
   </footer>
   {/* Footer Section End */}
   {/* Search Begin */}
