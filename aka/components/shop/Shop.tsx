@@ -1,21 +1,57 @@
-import React from 'react'
-import NavBar from '../navbar/NavBar' 
+
+import React, { useState } from 'react'
+import NavBar from '../navbar/NavBar'
+import axios from 'axios'
+import OneProduct from '../OneProduct';
+import Link  from 'next/link';
+const shop =({products}) => {
+const [allProducts,setAllProducts]=useState(products) 
+console.log(allProducts,'all');
+const [filters,setFilters]=useState([])
+const filterByCategories:any=(cate:any)=>{
+
+ const filtred=  allProducts.filter(e=>e.categorie==cate)
+setAllProducts(filtred)
+let filter=filters
 
 
-export const getStaticProps = async () => { 
-  const res = await fetch('http://localhost:8080/product/getall'); 
-  const data = await res.json; 
+setFilters([...filter,cate])
+}
+console.log(filters);
 
-console.log(data)
-  return { 
-    props: {products : data}
-   
-  }
-    
+const filterByGender:any=(gender:any)=>{
+let filter=filters
+
+
+setFilters([...filter,gender])
+ const filtred=  allProducts.filter(e=>e.gender==gender)
+setAllProducts(filtred)
+}
+ const filterByBrand:any=(brand:any)=>{
+let filter=filters
+
+
+setFilters([...filter,brand])
+ const filtred=  allProducts.filter(e=>e.brand==brand)
+setAllProducts(filtred)
+} 
+ const filterByPrice:any=(min:any,max:any,price:any)=>{
+let filter=filters
+
+
+setFilters([...filter,price])
+ const filtred=  allProducts.filter(e=>e.price>min && e.price<max)
+setAllProducts(filtred)
+} 
+const filterBySize:any=(size)=>{
+let filter=filters
+
+
+setFilters([...filter,size])
+ const filtred=  allProducts.filter(e=>e.size.includes(size))
+setAllProducts(filtred)
 } 
 
-const shop = () => {
-  
   return (
     <>
     <meta charSet="UTF-8" />
@@ -42,7 +78,7 @@ const shop = () => {
     <div id="preloder">
       <div className="loader" />
     </div>
- <NavBar></NavBar>
+
     {/* Breadcrumb Section Begin */}
     <section className="breadcrumb-option">
       <div className="container">
@@ -90,35 +126,32 @@ const shop = () => {
                       <div className="card-body">
                         <div className="shop__sidebar__categories">
                           <ul className="nice-scroll">
-                            <li>
-                              <a href="#">Men (20)</a>
+                            <li onClick={()=>{filterByGender('Men')}} className='btn display-1'>
+                              Men (20)
                             </li>
-                            <li>
-                              <a href="#">Women (20)</a>
+                            <li onClick={()=>{filterByGender('Women')}}  className='btn display-1'>
+                              Women (20)
                             </li>
-                            <li>
-                              <a href="#">Bags (20)</a>
+                            <li className='btn ' onClick={()=>{filterByCategories("Premature Baby")}}>
+                              Premature Baby (20)
                             </li>
-                            <li>
-                              <a href="#">Clothing (20)</a>
+                            <li className='btn display-1' onClick={()=>{filterByCategories("Clothes")}}>
+                              Clothes (20)
                             </li>
-                            <li>
-                              <a href="#">Shoes (20)</a>
+                            <li className='btn display-1' onClick={()=>{filterByCategories("Shoes")}}>
+                              Shoes (20)
                             </li>
-                            <li>
-                              <a href="#">Accessories (20)</a>
+                            <li className='btn display-1' onClick={()=>{filterByCategories("Accessories")}}>
+                              Accessories (20)
                             </li>
-                            <li>
-                              <a href="#">Kids (20)</a>
+                            <li className='btn display-1' onClick={()=>{filterByCategories("kids")}}>
+                              Kids (20)
                             </li>
-                            <li>
-                              <a href="#">Kids (20)</a>
-                            </li>
-                            <li>
-                              <a href="#">Kids (20)</a>
-                            </li>
+                          
                           </ul>
                         </div>
+                  <br />
+                  <br />
                       </div>
                     </div>
                   </div>
@@ -136,17 +169,17 @@ const shop = () => {
                       <div className="card-body">
                         <div className="shop__sidebar__brand">
                           <ul>
-                            <li>
-                              <a href="#">Louis Vuitton</a>
+                            <li onClick={()=>{filterByBrand("Louis Vuitton")}} className='btn'>
+                              Louis Vuitton
                             </li>
-                            <li>
-                              <a href="#">Chanel</a>
+                            <li onClick={()=>{filterByBrand("Chanel")}} className='btn'>
+                              Chanel
                             </li>
-                            <li>
-                              <a href="#">Hermes</a>
+                            <li onClick={()=>{filterByBrand("Hermes")}} className='btn'>
+                              Hermes
                             </li>
-                            <li>
-                              <a href="#">Gucci</a>
+                            <li onClick={()=>{filterByBrand("Gucci")}} className='btn'>
+                              Gucci
                             </li>
                           </ul>
                         </div>
@@ -167,23 +200,23 @@ const shop = () => {
                       <div className="card-body">
                         <div className="shop__sidebar__price">
                           <ul>
-                            <li>
-                              <a href="#">$0.00 - $50.00</a>
+                            <li onClick={()=>{filterByPrice(0,50,'0.00 dt - 50.00 dt')}} className='btn'>
+                              0.00 dt - 50.00 dt
                             </li>
-                            <li>
-                              <a href="#">$50.00 - $100.00</a>
+                            <li onClick={()=>{filterByPrice(50,100,'50.00 dt - 100.00 dt')}} className='btn'>
+                              50.00 dt - 100.00 dt
                             </li>
-                            <li>
-                              <a href="#">$100.00 - $150.00</a>
+                            <li onClick={()=>{filterByPrice(100,150,'100.00 dt - 150.00 dt')}} className='btn'>
+                              100.00 dt - 150.00 dt
                             </li>
-                            <li>
-                              <a href="#">$150.00 - $200.00</a>
+                            <li onClick={()=>{filterByPrice(150,200,'150.00 dt - 200.00 dt')}} className='btn'>
+                              150.00 dt - 200.00 dt
                             </li>
-                            <li>
-                              <a href="#">$200.00 - $250.00</a>
+                            <li onClick={()=>{filterByPrice(200,250,'200.00 dt - 250.00 dt')}} className='btn'>
+                              200.00 dt - 250.00 dt
                             </li>
-                            <li>
-                              <a href="#">250.00+</a>
+                            <li onClick={()=>{filterByPrice(250,500000,'250.00 dt +')}} className='btn'>
+                              250.00 dt +
                             </li>
                           </ul>
                         </div>
@@ -283,30 +316,7 @@ const shop = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="card">
-                    <div className="card-heading">
-                      <a data-toggle="collapse" data-target="#collapseSix">
-                        Tags
-                      </a>
-                    </div>
-                    <div
-                      id="collapseSix"
-                      className="collapse show"
-                      data-parent="#accordionExample"
-                    >
-                      <div className="card-body">
-                        <div className="shop__sidebar__tags">
-                          <a href="#">Product</a>
-                          <a href="#">Bags</a>
-                          <a href="#">Shoes</a>
-                          <a href="#">Fashio</a>
-                          <a href="#">Clothing</a>
-                          <a href="#">Hats</a>
-                          <a href="#">Accessories</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -315,75 +325,24 @@ const shop = () => {
             <div className="shop__product__option">
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-6">
-                  <div className="shop__product__option__left">
-                    <p>Showing 1–12 of 126 results</p>
-                  </div>
+                  
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6">
                   <div className="shop__product__option__right">
                     <p>Sort by Price:</p>
                     <select>
                       <option value="">Low To High</option>
-                      <option value="">$0 - $55</option>
-                      <option value="">$55 - $100</option>
+                      <option value="">0 - 55</option>
+                      <option value="">55 - 100</option>
                     </select>
                   </div>
                 </div>
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-4 col-md-6 col-sm-6">
-                <div className="product__item">
-                  <div
-                    className="product__item__pic set-bg"
-                    data-setbg="img/product/product-2.jpg"
-                  >
-                    <ul className="product__hover">
-                      <li>
-                        <a href="#">
-                          <img src="img/icon/heart.png" alt="" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img src="img/icon/compare.png" alt="" />{" "}
-                          <span>Compare</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img src="img/icon/search.png" alt="" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="product__item__text">
-                    <h6>Piqué Biker Jacket</h6>
-                    <a href="#" className="add-cart">
-                      + Add To Cart
-                    </a>
-                    <div className="rating">
-                      <i className="fa fa-star-o" />
-                      <i className="fa fa-star-o" />
-                      <i className="fa fa-star-o" />
-                      <i className="fa fa-star-o" />
-                      <i className="fa fa-star-o" />
-                    </div>
-                    <h5>$67.24</h5>
-                    <div className="product__color__select">
-                      <label htmlFor="pc-4">
-                        <input type="radio" id="pc-4" />
-                      </label>
-                      <label className="active black" htmlFor="pc-5">
-                        <input type="radio" id="pc-5" />
-                      </label>
-                      <label className="grey" htmlFor="pc-6">
-                        <input type="radio" id="pc-6" />
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             {allProducts.map((e:any)=>(
+              <OneProduct key={e._id} e={e}/>
+             ))}
               
               
             </div>
@@ -393,101 +352,6 @@ const shop = () => {
       </div>
     </section>
     {/* Shop Section End */}
-    {/* Footer Section Begin */}
-    <footer className="footer">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3 col-md-6 col-sm-6">
-            <div className="footer__about">
-              <div className="footer__logo">
-                <a href="#">
-                  <img src="img/footer-logo.png" alt="" />
-                </a>
-              </div>
-              <p>
-                The customer is at the heart of our unique business model, which
-                includes design.
-              </p>
-              <a href="#">
-                <img src="img/payment.png" alt="" />
-              </a>
-            </div>
-          </div>
-          <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
-            <div className="footer__widget">
-              <h6>Shopping</h6>
-              <ul>
-                <li>
-                  <a href="#">Clothing Store</a>
-                </li>
-                <li>
-                  <a href="#">Trending Shoes</a>
-                </li>
-                <li>
-                  <a href="#">Accessories</a>
-                </li>
-                <li>
-                  <a href="#">Sale</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-2 col-md-3 col-sm-6">
-            <div className="footer__widget">
-              <h6>Shopping</h6>
-              <ul>
-                <li>
-                  <a href="#">Contact Us</a>
-                </li>
-                <li>
-                  <a href="#">Payment Methods</a>
-                </li>
-                <li>
-                  <a href="#">Delivary</a>
-                </li>
-                <li>
-                  <a href="#">Return &amp; Exchanges</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
-            <div className="footer__widget">
-              <h6>NewLetter</h6>
-              <div className="footer__newslatter">
-                <p>
-                  Be the first to know about new arrivals, look books, sales &amp;
-                  promos!
-                </p>
-                <form action="#">
-                  <input type="text" placeholder="Your email" />
-                  <button type="submit">
-                    <span className="icon_mail_alt" />
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-12 text-center">
-            <div className="footer__copyright__text">
-              {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-              <p>
-                Copyright © 2020 All rights reserved | This template is made with{" "}
-                <i className="fa fa-heart-o" aria-hidden="true" /> by{" "}
-                {/* <a href="https://colorlib.com" target="_blank" rel="noreferrer"> */}
-                <a href="https://colorlib.com" target="_blank"  rel="noreferrer">
-                  Colorlib
-                </a>
-              </p>
-              {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    {/* Footer Section End */}
     {/* Search Begin */}
     <div className="search-model">
       <div className="h-100 d-flex align-items-center justify-content-center">
