@@ -1,5 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Link from 'next/link'
 const NavBar = () => {
   return (
@@ -23,15 +23,7 @@ const NavBar = () => {
       </div>
     </div>
     <div className="offcanvas__nav__option">
-      <a href="#" className="search-switch">
-        <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670922313/AKA/search_kbkgaw.png" alt="" />
-      </a>
-      <a href="#">
-        <img src="/aka/img/icon/heart.png" alt="" />
-      </a>
-      <a href="#">
-        <img src="/aka/img/icon/cart.png" alt="" /> <span>0</span>
-      </a>
+     
       <div className="price">$0.00</div>
     </div>
     <div id="mobile-menu-wrap" />
@@ -54,18 +46,9 @@ const NavBar = () => {
             <div className="header__top__right">
               <div className="header__top__links">
                 <a href="/" onClick={()=>localStorage.clear()}>Log Out</a>
-                <a href="#">FAQs</a>
+                
               </div>
-              <div className="header__top__hover">
-                <span>
-                  Usd <i className="arrow_carrot-down" />
-                </span>
-                <ul>
-                  <li>USD</li>
-                  <li>EUR</li>
-                  <li>USD</li>
-                </ul>
-              </div>
+           
             </div>
           </div>
         </div>
@@ -104,18 +87,15 @@ const NavBar = () => {
             </ul>
           </nav>
         </div>
-        <div className="col-lg-3 col-md-3">
-          <div className="header__nav__option">
-            <a href="#" className="search-switch">
-              <img src="/aka/img/icon/search.png" alt="" />
-            </a>
-            <a href="#">
-              <img src="/aka/img/icon/heart.png" alt="" />
-            </a>
-            <a href="#">
-              <img src="/aka/img/icon/cart.png" alt="" /> <span>0</span>
-            </a>
-            <div className="price">$0.00</div>
+        <div className="col-lg-3 col-md-3 row">
+          <div className='col-9'></div>
+          
+          <div className="header__nav__option btn col" onClick={()=>window.location.href='/cart'}>
+           <svg style={{ height: 53, width: 36 }} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 29 24" stroke-width="0.5" stroke="currentColor" className="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+</svg>
+
+           
           </div>
         </div>
       </div>

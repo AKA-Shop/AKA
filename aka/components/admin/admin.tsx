@@ -50,7 +50,7 @@ const admin = () => {
               
             </div>
           </div>
-          >
+          
         </nav>
       </div>
       <div id="layoutSidenav_content">

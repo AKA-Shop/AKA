@@ -47,7 +47,7 @@ exports.signUp = async function (req, res, next) {
         user.token = token;
 
         // return new user
-        res.status(201).json(token);
+        res.status(200).json(token);
       } catch (err) {
         console.log(err);
       }
@@ -97,4 +97,14 @@ exports.login = async function (req, res, next) {
     }
 
   };
+
+  exports.getAll = async (req, res) => {
+    const allUser = await User.find({});
+    try {
+      res.status(200).json(allUser);
+    } catch (error) {
+      res.status(401).json(error);
+    }
+  };
+
  
