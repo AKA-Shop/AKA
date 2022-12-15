@@ -76,7 +76,7 @@ const NavBar = () => {
         <div className="col-lg-3 col-md-3">
           <div className="header__logo">
             <a href="./index.html">
-              <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670925252/aka/logo/logo_zkivkb.png" alt="" />
+              {/* <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670925252/aka/logo/logo_zkivkb.png" alt="" /> */}
             </a>
           </div>
         </div>
