@@ -50,8 +50,8 @@ const deleteCart = async (req, res) => {
 const put = async (req, res) => {
     try {
         await Cart.findOneAndUpdate({ id: req.params.id }, {
-            quantity: req.body.quantity
-
+           $inc:{ quantity: 1
+}
         })
         res.send('yeey')
     }
