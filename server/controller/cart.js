@@ -45,7 +45,16 @@ const deleteCart = async (req, res) => {
         console.log(err)
     }
 }
+const deleteAll = async (req, res) => {
+console.log('hi');
+  
+   await Cart.deleteMany({}, (err, result) => {
+      if (err) console.log(err);
+      res.json(result);
+    });
+  
 
+};
 
 const put = async (req, res) => {
     try {
@@ -61,4 +70,4 @@ const put = async (req, res) => {
 }
 
 
-module.exports = { saveCart, get, put, deleteCart }
+module.exports = { saveCart, get, put, deleteCart,deleteAll }

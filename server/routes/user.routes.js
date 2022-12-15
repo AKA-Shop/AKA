@@ -6,6 +6,7 @@ var userController = require('../controller/user');
 userRouter.post("/signUp" , userController.signUp);
 userRouter.post("/login" , userController.login);
 userRouter.get("/:email",userController.findOneUser);
+userRouter.get("/getAll",userController.getAll);
 // userRouter.get("/accessRessource" , userController.accessResource);
 
 

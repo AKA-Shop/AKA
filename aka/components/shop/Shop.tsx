@@ -8,6 +8,7 @@ const shop =({products}) => {
 const [allProducts,setAllProducts]=useState(products) 
 console.log(allProducts,'all');
 const [filters,setFilters]=useState([])
+const [inptvalue,setInput]=useState('')
 const filterByCategories:any=(cate:any)=>{
 
  const filtred=  allProducts.filter(e=>e.categorie==cate)
@@ -51,7 +52,10 @@ setFilters([...filter,size])
  const filtred=  allProducts.filter(e=>e.size.includes(size))
 setAllProducts(filtred)
 } 
-
+const search=(input:any)=>{
+const filtred=  allProducts.filter(e=>e.name.toLowerCase().includes(input.toLowerCase()))
+setAllProducts(filtred)
+}
   return (
     <>
     <meta charSet="UTF-8" />
@@ -102,13 +106,20 @@ setAllProducts(filtred)
         <div className="row">
           <div className="col-lg-3">
             <div className="shop__sidebar">
+              remove all filter <svg onClick={()=>{
+                    axios.get("http://localhost:8080/product/getall").then(res=>{setAllProducts(res.data)
+                  setFilters([])})
+                  }} xmlns="http://www.w3.org/2000/svg" height='20px' width='20px' fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
               <div className="shop__sidebar__search">
-                <form action="#">
-                  <input type="text" placeholder="Search..." />
-                  <button type="submit">
-                    <span className="icon_search" />
-                  </button>
-                </form>
+                
+                  <input type="text" placeholder="Search..." onChange={e=>setInput(e.target.value)}  onKeyPress={(e) => {e.key === 'Enter' && search
+                
+                  (inptvalue)}
+                  }/>
+                
+                
               </div>
               <div className="shop__sidebar__accordion">
                 <div className="accordion" id="accordionExample">
@@ -127,25 +138,25 @@ setAllProducts(filtred)
                         <div className="shop__sidebar__categories">
                           <ul className="nice-scroll">
                             <li onClick={()=>{filterByGender('Men')}} className='btn display-1'>
-                              Men (20)
+                              Men 
                             </li>
                             <li onClick={()=>{filterByGender('Women')}}  className='btn display-1'>
-                              Women (20)
+                              Women 
                             </li>
                             <li className='btn ' onClick={()=>{filterByCategories("Premature Baby")}}>
-                              Premature Baby (20)
+                              Premature Baby 
                             </li>
                             <li className='btn display-1' onClick={()=>{filterByCategories("Clothes")}}>
-                              Clothes (20)
+                              Clothes 
                             </li>
                             <li className='btn display-1' onClick={()=>{filterByCategories("Shoes")}}>
-                              Shoes (20)
+                              Shoes 
                             </li>
                             <li className='btn display-1' onClick={()=>{filterByCategories("Accessories")}}>
-                              Accessories (20)
+                              Accessories 
                             </li>
                             <li className='btn display-1' onClick={()=>{filterByCategories("kids")}}>
-                              Kids (20)
+                              Kids 
                             </li>
                           
                           </ul>
@@ -325,18 +336,15 @@ setAllProducts(filtred)
             <div className="shop__product__option">
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-6">
+                  all filters
+                  <br />
+
+                  {filters.map(e=>{
+                  console.log(e);
                   
+                  return(e+"    " )}    )}
                 </div>
-                <div className="col-lg-6 col-md-6 col-sm-6">
-                  <div className="shop__product__option__right">
-                    <p>Sort by Price:</p>
-                    <select>
-                      <option value="">Low To High</option>
-                      <option value="">0 - 55</option>
-                      <option value="">55 - 100</option>
-                    </select>
-                  </div>
-                </div>
+              
               </div>
             </div>
             <div className="row">
