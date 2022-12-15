@@ -8,7 +8,7 @@ userRouter.get("/getAll", userController.retrieve );
 
 userRouter.post("/signUp" , userController.signUp);
 userRouter.post("/login" , userController.login);
-userRouter.get("/accessRessource" , userController.accessResource);
+// userRouter.get("/accessRessource" , userController.accessResource);
 
 
 
