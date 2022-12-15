@@ -23,7 +23,7 @@ const Product = mongoose.model(
 
     brand: {
       type: String,
-      enum: ["Louis Vuitton", "Chanel", "Hermes", "Gucci"],
+      enum: ["Louis Vuitton", "Chanel", "Hermes", "Gucci","Zara","H&M","P&B"],
     },
     closeView: { type: String },
     fullView: { type: String },
