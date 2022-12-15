@@ -476,7 +476,7 @@ const shop = () => {
               <p>
                 Copyright © 2020 All rights reserved | This template is made with{" "}
                 <i className="fa fa-heart-o" aria-hidden="true" /> by{" "}
-                <a href="https://colorlib.com" target="_blank" rel="noreferrer">
+                {/* <a href="https://colorlib.com" target="_blank" rel="noreferrer"> */}
                 <a href="https://colorlib.com" target="_blank"  rel="noreferrer">
                   Colorlib
                 </a>
