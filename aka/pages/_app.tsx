@@ -39,7 +39,7 @@ else if(user.admin==true && ( (["/admin"].includes(appProps.router.pathname)))) 
     </Layout>
   );
 } 
-else if (user.admin==false &&((["/shop"].includes(appProps.router.pathname)) || (["/shop/[name]"].includes(appProps.router.pathname)) || (["/home"].includes(appProps.router.pathname))) || (["/checkOut"].includes(appProps.router.pathname))  )
+else if (user.admin==false &&((["/shop"].includes(appProps.router.pathname)) || (["/shop/[name]"].includes(appProps.router.pathname)) || (["/cart"].includes(appProps.router.pathname)) || (["/home"].includes(appProps.router.pathname))) || (["/checkOut"].includes(appProps.router.pathname))  )
     return (
       <Layout>
         <Component {...pageProps} />{" "}
