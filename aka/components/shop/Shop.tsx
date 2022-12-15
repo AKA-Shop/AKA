@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import NavBar from '../navbar/NavBar'
 import axios from 'axios'
@@ -50,6 +51,7 @@ setFilters([...filter,size])
  const filtred=  allProducts.filter(e=>e.size.includes(size))
 setAllProducts(filtred)
 } 
+
   return (
     <>
     <meta charSet="UTF-8" />
@@ -350,7 +352,7 @@ setAllProducts(filtred)
       </div>
     </section>
     {/* Shop Section End */}
- 
+
     {/* Search Begin */}
     <div className="search-model">
       <div className="h-100 d-flex align-items-center justify-content-center">

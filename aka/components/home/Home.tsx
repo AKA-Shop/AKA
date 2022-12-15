@@ -196,6 +196,7 @@ const Home = ({}) => {
     </div>
   </section>
   {/* Instagram Section End */}
+
  
 </>
   )

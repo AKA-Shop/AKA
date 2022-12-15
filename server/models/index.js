@@ -5,6 +5,7 @@ mongoose.Promise = global.Promise;
 
 
 db.user = require("./user.model");
+
 db.role = require("./cart.model");
 db.patient = require("./product.model");
 
