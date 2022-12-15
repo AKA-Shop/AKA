@@ -8,7 +8,7 @@ const signup = () => {
     const signup=(body)=>{
         axios.post('http://localhost:8080/user/signUp',body).then(res=>{
           localStorage.setItem("token", res.data)
-          window.location.href='/'
+          window.location.href='/home'
 
         } ).catch(err=>alert(err)
         )
@@ -16,7 +16,7 @@ const signup = () => {
     const SignIn=(body)=>{
         axios.post('http://localhost:8080/user/login',body).then(res=>{
           localStorage.setItem("token", res.data)
-          window.location.href='/'
+          window.location.href='/home'
 
         }
         ).catch(err=>alert(err)
