@@ -53,7 +53,7 @@ const NavBar = () => {
           <div className="col-lg-6 col-md-5">
             <div className="header__top__right">
               <div className="header__top__links">
-                <a href="#">Sign in</a>
+                <a href="/" onClick={()=>localStorage.clear()}>Log Out</a>
                 <a href="#">FAQs</a>
               </div>
               <div className="header__top__hover">
@@ -76,7 +76,7 @@ const NavBar = () => {
         <div className="col-lg-3 col-md-3">
           <div className="header__logo">
             <a href="./index.html">
-              <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670925252/aka/logo/logo_zkivkb.png" alt="" />
+              {/* <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670925252/aka/logo/logo_zkivkb.png" alt="" /> */}
             </a>
           </div>
         </div>
