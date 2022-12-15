@@ -47,12 +47,10 @@ exports.signUp = async function (req, res, next) {
         user.token = token;
 
         // return new user
-        res.status(201).json(user);
+        res.status(201).json(token);
       } catch (err) {
         console.log(err);
       }
-
-
 
   };
 exports.login = async function (req, res, next) {
@@ -82,44 +80,21 @@ exports.login = async function (req, res, next) {
       user.token = token;
 
       // user
-      res.status(200).json(user);
+      res.status(200).json(token);
     }
-    res.status(400).send("Invalid Credentials");
+    // res.status(400).send("Invalid Credentials");
   } catch (err) {
     console.log(err);
   }
   // Our register logic ends here
   };
-
-  exports.accessResource =  function (req, res ) {
-    const token = req.headers.authorization.split(' ')[1]; 
-    //Authorization: 'Bearer TOKEN'
-    if(!token)
-    {
-        res.status(200).json({success:false, message: "Error!Token was not provided."});
+  exports.findOneUser = async (req, res) => {
+    const oneUser = await User.findOne({ email: req.params.email });
+    try {
+      res.status(201).send(oneUser);
+    } catch (err) {
+      res.status(500).json(err);
     }
-    //Decoding the token
-    //const decodedToken = jwt.verify(token,"my_secret_key" );
-    const decodedToken = jwt.verify(token , "my_security_key");
-    res.status(200).json({success:true, data:{email:decodedToken.email}});
-};
 
-
-
-exports.createOne = function (req, res) {
-
-};
-
-exports.retrieve = function (req, res) {
-
-};
-
-exports.retrieveOne = function (req, res) {
-
-};
-
-exports.updateOne = function (req, res) {
-};
-
-exports.deleteOne = function (req, res) {
-};
+  };
+ 
