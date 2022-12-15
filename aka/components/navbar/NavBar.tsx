@@ -87,11 +87,11 @@ const NavBar = () => {
                 <Link href='/'>Home</Link>
               </li>
               <li>
-                <a href="./shop.html">Shop</a>
+                <Link href="/shop">Shop</Link>
               </li>
              
               <li>
-                <a href="./blog.html">About Us</a>
+                <Link href="/aboutus">About Us</Link>
               </li>
               <li><div className="input-group rounded row">
                 <div className='col'><input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" /></div>

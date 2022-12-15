@@ -1,9 +1,18 @@
+import axios from 'axios';
 import React from 'react'
 // import Carousel from 'react-bootstrap/Carousel';
 // import Image from 'next/image'
 import Car from '../carousel/Carousel';
-import NavBar from '../navbar/NavBar';
-const Home = () => {
+export const getStaticProps = async () => {
+  const res = await axios.get('');
+  const data = await res.data;
+
+  return {
+    props: { ninjas: data }
+  }
+}
+
+const Home = ({}) => {
   return (
       <>
   <meta charSet="UTF-8" />
@@ -11,7 +20,7 @@ const Home = () => {
   <meta name="keywords" content="Male_Fashion, unica, creative, html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-  <title>Male-Fashion | Template</title>
+  <title>AKA-Fashion </title>
   {/* Google Font */}
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -30,7 +39,7 @@ const Home = () => {
   <div id="preloder">
     <div className="loader" />
   </div>
- <NavBar></NavBar>
+
   {/* Header Section End */}
   {/* Hero Section Begin */}
  <section className="hero">
@@ -187,172 +196,7 @@ const Home = () => {
     </div>
   </section>
   {/* Instagram Section End */}
-  {/* Latest Blog Section Begin */}
-  <section className="latest spad">
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-12">
-          <div className="section-title">
-            <span>Latest News</span>
-            <h2>Fashion New Trends</h2>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="blog__item">
-            <div
-              className="blog__item__pic set-bg"
-              data-setbg="/aka/img/blog/blog-1.jpg"
-            />
-            <div className="blog__item__text">
-              <span>
-                <img src="/aka/img/icon/calendar.png" alt="" /> 16 February 2020
-              </span>
-              <h5>What Curling Irons Are The Best Ones</h5>
-              <a href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="blog__item">
-            <div
-              className="blog__item__pic set-bg"
-              data-setbg="/aka/img/blog/blog-2.jpg"
-            />
-            <div className="blog__item__text">
-              <span>
-                <img src="/aka/img/icon/calendar.png" alt="" /> 21 February 2020
-              </span>
-              <h5>Eternity Bands Do Last Forever</h5>
-              <a href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4 col-md-6 col-sm-6">
-          <div className="blog__item">
-            <div
-              className="blog__item__pic set-bg"
-              data-setbg="/aka/img/blog/blog-3.jpg"
-            />
-            <div className="blog__item__text">
-              <span>
-                <img src="/aka/img/icon/calendar.png" alt="" /> 28 February 2020
-              </span>
-              <h5>The Health Benefits Of Sunglasses</h5>
-              <a href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/* Latest Blog Section End */}
-  {/* Footer Section Begin */}
-  <footer className="footer">
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-3 col-md-6 col-sm-6">
-          <div className="footer__about">
-            <div className="footer__logo">
-              <a href="#">
-                <img src="/aka/img/footer-logo.png" alt="" />
-              </a>
-            </div>
-            <p>
-              The customer is at the heart of our unique business model, which
-              includes design.
-            </p>
-            <a href="#">
-              <img src="/aka/img/payment.png" alt="" />
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
-          <div className="footer__widget">
-            <h6>Shopping</h6>
-            <ul>
-              <li>
-                <a href="#">Clothing Store</a>
-              </li>
-              <li>
-                <a href="#">Trending Shoes</a>
-              </li>
-              <li>
-                <a href="#">Accessories</a>
-              </li>
-              <li>
-                <a href="#">Sale</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-lg-2 col-md-3 col-sm-6">
-          <div className="footer__widget">
-            <h6>Shopping</h6>
-            <ul>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-              <li>
-                <a href="#">Payment Methods</a>
-              </li>
-              <li>
-                <a href="#">Delivary</a>
-              </li>
-              <li>
-                <a href="#">Return &amp; Exchanges</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
-          <div className="footer__widget">
-            <h6>NewLetter</h6>
-            <div className="footer__newslatter">
-              <p>
-                Be the first to know about new arrivals, look books, sales &amp;
-                promos!
-              </p>
-              <form action="#">
-                <input type="text" placeholder="Your email" />
-                <button type="submit">
-                  <span className="icon_mail_alt" />
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-lg-12 text-center">
-          <div className="footer__copyright__text">
-            {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-            <p>
-              Copyright © 2020 All rights reserved | This template is made with{" "}
-              <i className="fa fa-heart-o" aria-hidden="true" /> by{" "}
-              <a href="https://colorlib.com" target="_blank">
-                Colorlib
-              </a>
-            </p>
-            {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  {/* Footer Section End */}
-  {/* Search Begin */}
-  <div className="search-model">
-    <div className="h-100 d-flex align-items-center justify-content-center">
-      <div className="search-close-switch">+</div>
-      <form className="search-model-form">
-        <input type="text" id="search-input" placeholder="Search here....." />
-      </form>
-    </div>
-  </div>
-  {/* Search End */}
-  {/* Js Plugins */}
+ 
 </>
   )
 }
