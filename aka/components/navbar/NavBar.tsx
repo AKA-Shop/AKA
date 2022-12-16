@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Link from 'next/link'
+import axios from 'axios'
 const NavBar = () => {
   return (
     <> {/* Offcanvas Menu Begin */}
@@ -45,7 +46,8 @@ const NavBar = () => {
           <div className="col-lg-6 col-md-5">
             <div className="header__top__right">
               <div className="header__top__links">
-                <a href="/" onClick={()=>localStorage.clear()}>Log Out</a>
+                <a href="/" onClick={()=>{localStorage.clear()
+                axios.delete('http://localhost:8080/cart.detetall')}}>Log Out</a>
                 
               </div>
            
@@ -67,7 +69,7 @@ const NavBar = () => {
           <nav className="header__menu mobile-menu">
             <ul>
               <li className="active">
-                <Link href='/'>Home</Link>
+                <Link href='/home'>Home</Link>
               </li>
               <li>
                 <Link href="/shop">Shop</Link>

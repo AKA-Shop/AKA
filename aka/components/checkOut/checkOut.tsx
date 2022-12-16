@@ -1,6 +1,6 @@
 import React from 'react'
 
-function test1() {
+const checkOut=() =>{
   return (
     <>
   <meta charSet="UTF-8" />
@@ -476,4 +476,4 @@ function test1() {
   )
 }
 
-export default test1
+export default checkOut

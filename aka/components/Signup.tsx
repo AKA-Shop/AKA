@@ -9,7 +9,7 @@ const signup = () => {
   <meta name="description" content="Landing PAGE Html5 Template" />
   <meta name="keywords" content="landing,startup,flat" />
   <meta name="author" content="Made By GN DESIGNS" />
-  <title>Vortex - Startup Landing Page</title>
+  <title>aka</title>
   {/* // PLUGINS (css files) // */}
   <link
     href="assets/js/plugins/bootsnav_files/skins/color.css"
@@ -142,15 +142,14 @@ const signup = () => {
       <div className="row">
         {/* Introduction */}
         <div className="col-md-6 caption">
-          <h1>Welcome To Vortex</h1>
+          <h1>Welcome To AKA Clothes style</h1>
           <h2>
-            I am
+            we are
             <span className="animated-text" />
             <span className="typed-cursor" />
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni,
-            quibusdam. Sit, quas tempora quia officia!
+            
           </p>
           <a href="#" className="btn btn-transparent">
             Get Started
