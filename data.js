@@ -15,7 +15,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dugewmeeh/image/upload/v1671006868/aka/clothes/WOOL%20BLEND%20COAT/6362589500_1_1_1_ifdtbi-removebg_knuo5v.png",
     "withoutModel":
-      "https://res.cloudinary.com/dugewmeeh/image/upload/v1671006866/aka/clothes/WOOL%20BLEND%20COAT/6362589500_6_1_1-removebg-preview_lfxsej.png",
+      "https://res.cloudinary.com/dugewmeeh/image/upload/v1671006866/aka/clothes/WOOL%20BLEND%20COAT/6362589500_6_1_1-removebg-preview_lfxsej.png"
   },
   {
     "name": "KNIT SWEATER WITH SIDE BUTTONS",
@@ -33,7 +33,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671093789/aka/3390110733_1_1_1-removebg-preview_1_e5koc1.png",
     "withoutModel":
-      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671093789/aka/3390110733_6_1_1-removebg-preview_wjsxkb.png",
+      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671093789/aka/3390110733_6_1_1-removebg-preview_wjsxkb.png"
   },
 
   {
@@ -52,7 +52,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671096266/aka/3121501870_1_1_1-removebg-preview_iyknfo.png",
     "withoutModel":
-      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671096061/aka/3121501870_6_1_1-removebg-preview_w3l0qc.png",
+      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671096061/aka/3121501870_6_1_1-removebg-preview_w3l0qc.png"
   },
   
   {
@@ -71,7 +71,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671096768/aka/0562615756_1_1_1-removebg-preview_ugyshq.png",
     "withoutModel":
-      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671096978/aka/0562615756_6_1_1-removebg-preview_vvwzyr.png",
+      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671096978/aka/0562615756_6_1_1-removebg-preview_vvwzyr.png"
   },
   {
     "name": "DENIM WORKER JACKET",
@@ -108,7 +108,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671099060/3643763407_1_1_1-removebg-preview_uctyzy.png",
     "withoutModel":
-      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671099149/3643763407_6_1_1-removebg-preview_rad83q.png",
+      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671099149/3643763407_6_1_1-removebg-preview_rad83q.png"
   },
 
   {
@@ -127,7 +127,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671099732/2284646800_2_1_1-removebg-preview_ejxld9.png",
     "withoutModel":
-      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671099779/2284646800_6_1_1-removebg-preview_crhyum.png",
+      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671099779/2284646800_6_1_1-removebg-preview_crhyum.png"
   },
   {
     "name": "FLORAL MINI DRESS",
@@ -145,7 +145,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671100321/1971192942_1_1_1-removebg-preview_ri7i6n.png",
     "withoutModel":
-      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671100446/1971192942_6_1_1-removebg-preview_qnsatr.png",
+      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671100446/1971192942_6_1_1-removebg-preview_qnsatr.png"
   },
   {
     "name": "REVERSIBLE PUFFER GILET Water",
@@ -163,7 +163,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671101065/3427714085_1_1_1-removebg-preview_dufnwu.png",
     "withoutModel":
-      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671101122/3427714085_15_12_1-removebg-preview_dyjfxr.png",
+      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671101122/3427714085_15_12_1-removebg-preview_dyjfxr.png"
   },
   {
     "name": "BASIC MEDIUM WEIGHT T-SHIRT",
@@ -239,7 +239,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671101065/3427714085_1_1_1-removebg-preview_dufnwu.png",
     "withoutModel":
-      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671101122/3427714085_15_12_1-removebg-preview_dyjfxr.png",
+      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671101122/3427714085_15_12_1-removebg-preview_dyjfxr.png"
   },
   {
     "name": "BASIC MEDIUM WEIGHT T-SHIRT",
@@ -296,7 +296,7 @@ const data = [
     "fullView":
       "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671101065/3427714085_1_1_1-removebg-preview_dufnwu.png",
     "withoutModel":
-      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671101122/3427714085_15_12_1-removebg-preview_dyjfxr.png",
+      "https://res.cloudinary.com/dcvibsnc9/image/upload/v1671101122/3427714085_15_12_1-removebg-preview_dyjfxr.png"
   },
   {
     "name": "BASIC MEDIUM WEIGHT T-SHIRT",

@@ -57,8 +57,8 @@ const Home = ({}) => {
               <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670924731/aka/banner/banner-1_zjlwum.jpg" alt="" />
             </div>
             <div className="banner__item__text">
-              <h2>Clothing Collections 2030</h2>
-              <a href="#">Shop now</a>
+              <h2>Clothing Collections 2023</h2>
+              <a href="shop">Shop now</a>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Home = ({}) => {
             </div>
             <div className="banner__item__text">
               <h2>Accessories</h2>
-              <a href="#">Shop now</a>
+              <a href="shop">Shop now</a>
             </div>
           </div>
         </div>
@@ -79,8 +79,8 @@ const Home = ({}) => {
               <img src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670924731/aka/banner/banner-3_xvgsjp.jpg" alt="" />
             </div>
             <div className="banner__item__text">
-              <h2>Shoes Spring 2030</h2>
-              <a href="#">Shop now</a>
+              <h2>Shoes Spring 2023</h2>
+              <a href="shop">Shop now</a>
             </div>
           </div>
         </div>

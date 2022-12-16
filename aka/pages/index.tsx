@@ -30,7 +30,7 @@ const signup = () => {
   <meta name="description" content="Landing PAGE Html5 Template" />
   <meta name="keywords" content="landing,startup,flat" />
   <meta name="author" content="Made By GN DESIGNS" />
-  <title>Vortex - Startup Landing Page</title>
+  <title>AKA</title>
   {/* // PLUGINS (css files) // */}
   <link
     href="assets/js/plugins/bootsnav_files/skins/color.css"
@@ -84,22 +84,14 @@ const signup = () => {
       <div className="row">
         {/* Introduction */}
         <div  className="col-md-6 caption">
-          <h1>Welcome To Vortex</h1>
-          <h2>
-            I am
-            <span className="animated-text" />
-            <span className="typed-cursor" />
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni,
-            quibusdam. Sit, quas tempora quia officia!
-          </p>
+          <h1 style={{position:'relative',right:'100px'}}> AKA clothes style</h1>
+         
        
         </div>
         {/* Sign Up */}
         <div className="col-md-5 col-md-offset-1">
           {/* <form className="signup-form"> */}
-            <h2 className="text-center">Signup Now</h2>
+            {/* <h2 className="text-center">Signup </h2> */}
             <hr />
             <div className="form-group">
             
@@ -127,7 +119,7 @@ const signup = () => {
               <input
               onChange={e=>setPassword(e.target.value)}
 
-                type="text"
+                type="password"
                 className="form-control"
                 placeholder="Password"
                

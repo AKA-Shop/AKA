@@ -107,4 +107,11 @@ exports.login = async function (req, res, next) {
     }
   };
 
- 
+ exports.getget = async (req, res) => {
+   const allUser = await User.find({});
+   try {
+     res.status(200).json(allUser);
+   } catch (error) {
+     res.status(401).json(error);
+   }
+ };

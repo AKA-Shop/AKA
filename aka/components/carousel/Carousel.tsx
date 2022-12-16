@@ -1,6 +1,22 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import SimpleImageSlider from "react-simple-image-slider";
+
+const images = [
+  
+  {
+    url:
+      "https://res.cloudinary.com/dugewmeeh/image/upload/v1670925680/aka/hero/hero-2_qnu7hz.jpg"
+  },
+  {url:"https://res.cloudinary.com/dugewmeeh/image/upload/v1670925680/aka/hero/hero-1_olnrha.jpg"}
+];
+
+ 
+ 
+        
+          
+        
 function Car() {
   return (
    <div
@@ -10,8 +26,16 @@ function Car() {
 >
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img className="d-block w-100" src="https://res.cloudinary.com/dugewmeeh/image/upload/v1670925680/aka/hero/hero-1_olnrha.jpg" alt="First slide" />
-       <div style={{position:'relative',bottom:'400px' }}>
+        <SimpleImageSlider
+            width={1519}
+            height={600}
+            images={images}
+            showBullets={true}
+            showNavs={true}
+            loop={true}
+             autoPlay={true}
+          />
+       <div style={{position:'relative',bottom:'400px' ,left:'100px'}}>
                                 <h6>Summer Collection</h6>
                                 <h2>Fall - Winter Collections 2030</h2>
                                 <div className='row'>
@@ -29,27 +53,11 @@ function Car() {
     </div>
     
   </div>
-  <a
-    className="carousel-control-prev"
-    href="#carouselExampleControls"
-    role="button"
-    data-slide="prev"
-  >
-    <span className="carousel-control-prev-icon" aria-hidden="true" />
-    <span className="sr-only">Previous</span>
-  </a>
-  <a
-    className="carousel-control-next"
-    href="#carouselExampleControls"
-    role="button"
-    data-slide="next"
-  >
-    <span className="carousel-control-next-icon" aria-hidden="true" />
-    <span className="sr-only">Next</span>
-  </a>
+
 </div>
 
   );
 }
 
 export default Car;
+
